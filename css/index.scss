@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* full page */
+html,body,#demo {
+  width: 100%;
+  height: 100%;
+}
+/* uniform bg */
+.swiper-slide {
+  background: url("../img/bg.png");
+}
+
+/* img scale */
+img {
+  zoom: 0.5;
+}
+
+/* diy animation style: jump */
+.jump {
+  -webkit-animation-name: jump;
+  animation-name: jump;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+@keyframes jump {
+  0%,100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,-3px,0);
+  }
+
+  50%{
+    -webkit-transition-timing-function: cubic-bezier(0.755,.050,.855,.060);
+    transition-timing-function: cubic-bezier(0.52, 0.06, 0.81, 0.21);
+    -webkit-transform: translate3d(0,-30px,0);
+    -ms-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-8px,0);
+  }
+}
+
+/*#page-1*/
+#page-1 {
+  .img {
+    width: 100%;
+    height: 95px;
+    text-align: center;
+    img {
+      &.first {
+        margin-top: 60px;
+        height: 160px;
+      }
+      &.last {
+        height: 600px;
+      }
+    }
+  }
+}
+
+/* arrow */
+.arr {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  text-align: center;
+  -webkit-animation-duration: 1.5s;
+  img {
+    height: 100%;
+  }
+}
+
+/*#page-2*/
+#page-2 {
+  .tit {
+    height: 209px;
+    background-color: #0092D3;
+    text-align: center;
+    position: relative;
+    .title {
+      margin-top: 108px;
+    }
+    .tit-desc {
+      position: absolute;
+      left: 0;
+      bottom: 38px;
+    }
+  }
+  .content {
+    padding: 0 33.75px;
+    .year {
+      margin: 56px 0;
+    }
+  }
+  .arr-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }
+}
+
+/*#page-3 basicly same as page-2*/
+#page-3 {
+  @extend #page-2;
+  .arr-bottom-2 {
+    position: absolute;
+    width: 100%;
+    padding-right: 10px;
+    bottom: 0;
+    text-align: right;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+/*#page-4*/
+#page-4 {
+  position: relative;
+  .dev-bg {
+    position: absolute;
+    background: url("../img/page_4_05.png") no-repeat;
+    background-size: contain;
+    width: (623px/2);
+    height: (1008px/2);
+  }
+  .dev-path {
+    text-align: center;
+    img {
+      margin-top: 50px;
+    }
+  }
+  .dev-path-desc {
+    text-align: center;
+    img {
+      margin-top: 93px;
+    }
+  }
+  .dev-path-icons {
+    margin-top: 57px;
+    div {
+      width: 48%;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}
+
+/*#page-5 similar with page-2*/
+#page-5 {
+  @extend #page-4;
+  .dev-bg {
+    position: absolute;
+    background: url("../img/page_5_06.png") no-repeat;
+    background-size: contain;
+    width: (342px/2);
+    height: (1007px/2);
+  }
+  .dev-path-icons {
+    margin-top: 0;
+    div {
+      margin-top: 41px;
+    }
+  }
+}
+
+/*#page-6*/
+#page-6 {
+  position: relative;
+  .desc {
+    background: url("../img/page_6_02.png") no-repeat;
+    background-size: contain;
+    height: (416px/2);
+    text-align: center;
+    img {
+      margin-top: 111px;
+    }
+  }
+  .options {
+    height: 459px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #28A7E1;
+    text-align: center;
+    .icons {
+      margin-top: 24px;
+    }
+  }
+}
+
+/*#page-7*/
+#page-7 {
+  position: relative;
+  .bg {
+    position: absolute;
+    width: 100%;
+  }
+  .qa {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    img {
+      margin-top: 60px;
+    }
+  }
+}
+
+/*#page-8*/
+#page-8 {
+  @extend #page-7
+}
+
+/*#page-9*/
+#page-9 {
+  background: #014C6D;
+  .logo {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    img {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin-left: -(408px/2);
+      margin-top: -(410px/2);
+    }
+  }
+  .foot {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
